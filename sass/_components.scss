@@ -123,13 +123,22 @@
 .side-nav {
     font-size: 1.4rem;
     list-style: none;
-    margin-top: 3.5rem;
+    margin-top: 3.5rem; 
+
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
 
     &__item {
         position: relative;
 
         &:not(:last-child) {
-            margin-bottom: .5rem; 
+            margin-bottom: .5rem;
+            
+            @media only screen and (max-width: $bp-medium) {
+                margin: 0;
+            }
         }
     }
 
@@ -169,6 +178,11 @@
 
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+                justify-content: center;
+                padding: 2rem;
+            }
     }
 
     &__icon {
@@ -186,6 +200,10 @@
     color: var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
 //////////////////////////////////
@@ -320,7 +338,6 @@
 
 //////////////////////////////////
 //LIST
-
 .list {
     list-style: none;
     margin: 3rem 0;
@@ -369,7 +386,7 @@
     }
 
     &__friends {
-
+        display: flex;
     }
 
     &__photo {
@@ -380,7 +397,7 @@
         border: 3px solid #fff;
 
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -394,6 +411,11 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
         margin-bottom: 2rem;
@@ -454,6 +476,10 @@
     padding: 3.5rem 0;
     text-align: center;
 
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
+
     &__book-now {
         font-size: 2rem;
         font-weight: 300;
@@ -463,7 +489,7 @@
 }
 
 //////////////////////////////////
-//CALL TO ACTION
+//CALL TO ACTION BUTTON
 .btn {
     font-size: 1.5rem;
     font-weight: 300;
